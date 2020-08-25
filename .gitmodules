@@ -1,0 +1,4 @@
+[submodule "huawei_samples"]
+	path = huawei_samples
+	url = https://gitee.com/HuaweiAtlas/samples
+	branch = master

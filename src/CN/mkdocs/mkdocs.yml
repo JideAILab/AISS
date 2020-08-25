@@ -1,0 +1,12 @@
+site_name: 0.0.0.0
+nav:
+    - Home: Readme_CN.md
+    - About: about.md
+    - Guide: guide.md
+    - 使用指南: guide_CN.md
+    - How to install docker: install_docker.md
+    - Docker安装: install_docker_CN.md
+    - How to install docker compose: install_docker_compose.md
+    - Docker compose安装: install_docker_compose_CN.md
+
+theme: readthedocs

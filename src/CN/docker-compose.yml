@@ -1,0 +1,66 @@
+# docker-compose.yml
+version: '3'
+
+services: 
+    codeserver:
+        build:
+            context: ../../
+            dockerfile: src/CN/Dockerfile
+        restart: always
+        volumes:
+            - user_work_directory:/home
+        ports:
+            - "8777:8888"
+        devices:
+            - "/dev/davinci_manager:/dev/davinci_manager"
+            - "/dev/hisi_hdc:/dev/hisi_hdc"
+            - "/dev/davinci0:/dev/davinci0"
+
+    mkdocs:
+        build:
+            context: ../../
+            dockerfile: src/CN/mkdocs/Dockerfile
+        restart: always
+        ports:
+            - "8774:8888"
+
+    filebrowser:
+        build: ./filebrowser
+        restart: always
+        volumes:
+            - user_work_directory:/home
+        ports:
+            - "8776:8888"
+
+    ttyd:
+        build: ./ttyd
+        restart: always
+        ports:
+            - "8775:8888"
+        links:
+            - codeserver
+    
+    site:
+        build:
+            context: ./site
+            dockerfile: Dockerfile
+        ports: 
+            - 8873:80
+        restart: always
+    
+    nginx:
+        build:
+            context: ./nginx
+            dockerfile: Dockerfile
+        restart: always
+        links:
+            - codeserver
+            - mkdocs
+            - filebrowser
+            - ttyd
+            - site
+        ports: 
+            - 8870:80
+    
+volumes:
+    user_work_directory:
