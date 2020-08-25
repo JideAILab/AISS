@@ -1,5 +1,7 @@
 # 开发者云上Atlas深度学习推理软件栈Atlas 300C Inference Stack(AIS)
 
+CN|[EN](Readme.md)
+
 ## 功能简介
 
 Atlas 300C Inference Stack(AIS)是构建在鹏城实验室开发者云（https://dw.pcl.ac.cn）上基于arm和atlas300c架构的深度学习推理软件栈。该软件栈提供完整的atlas 300c开发环境，用户可以通过Web Browser访问开发者云申请进行使用。本资源是AIS的完整代码，需搭配arm服务器和atlas 300c 计算加速卡使用。
