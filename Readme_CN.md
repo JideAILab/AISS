@@ -99,7 +99,15 @@ cat result
     * g++ 7.5.0
     * cmake 3.5.2
     * python3 3.6.9
-    * git 2.17.1
     * pip3 9.0.1
     * numpy 1.18.5
     * ddk 1.32.T7.B070，接口版本：1.1.1
+
+## 致谢
+
+特别感谢以下仓库。无先后顺序。
+
+* [filebrowser](https://github.com/filebrowser/filebrowser)
+* [mkdocs](https://github.com/mkdocs/mkdocs)
+* [ttyd](https://github.com/tsl0922/ttyd)
+* [code-server](https://github.com/cdr/code-server)
