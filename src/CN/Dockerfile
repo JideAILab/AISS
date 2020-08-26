@@ -43,7 +43,8 @@ RUN tar -zxvf $(ls Ascend_DDK*ubuntu18.04*) &&\
             export NPU_HOST_LIB=$DDK_PATH/host/lib \n \
             export NPU_DEV_LIB=$DDK_PATH/device/lib \n \
             cd /home \n \
-            " >> $HOME/.bashrc
+            " >> $HOME/.bashrc &&\
+    ln -s /huawei/ddk/bin/aarch64-linux-gcc7.3.1/omg /usr/sbin/omg 
 RUN curl -fOL https://github.com/cdr/code-server/releases/download/v3.4.1/code-server_3.4.1_arm64.deb && \
     dpkg -i $(ls code-server*.deb) &&\
     mkdir -p $HOME/.local/share/code-server && mkdir -p $HOME/.config/code-server &&\
