@@ -66,13 +66,13 @@ git submodule update --init --recursive
 cd src/default
 
 ASCEND_CHIP_ID=$YOUR_ID PORT=$YOUR_PORT \
-docker-compose up -d --no-deps --build
+docker-compose --project-name $PROJECT_NAME up -d --no-deps --build
 
 #中国大陆
 cd src/CN
 
 ASCEND_CHIP_ID=$YOUR_ID PORT=$YOUR_PORT \
-docker-compose up -d --no-deps --build
+docker-compose --project-name $PROJECT_NAME up -d --no-deps --build
 ```
 ### 方法二：集群部署
 在安装驱动、Docker、docker-compose之后，将Docker Engine转为Swarm形式运行。
