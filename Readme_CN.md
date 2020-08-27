@@ -2,6 +2,12 @@
 
 简中|[EN](Readme.md)
 
+## 开发单位
+
+| 鹏程实验室  |  北京技德系统技术有限公司 |
+|---|---|
+|<img src="https://dw.pcl.ac.cn/eco-mall/favicon.ico" width="70" height="70" /> |  <img src="https://i.loli.net/2020/08/27/rG7SsjcwBMKAENW.png"  height="150" />|
+
 ## 功能简介
 
 Atlas 300C Inference Software Stack(AISS)是构建在[鹏城实验室](http://www.pcl.ac.cn/)[开发者云](https://dw.pcl.ac.cn)上基于ARM和Atlas300架构的国产硬件深度学习推理软件栈。为方便用户在Atlas 300平台应用程序开发，该软件栈自动配置完整的Atlas 300开发环境，用户可以在[开发者云](https://dw.pcl.ac.cn/#/soft/deepLearn)申请使用。本仓库为AISS的完整代码，需搭配ARM处理器和Atlas 300/300c计算加速卡使用。

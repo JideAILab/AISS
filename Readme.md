@@ -2,6 +2,12 @@
 
 EN|[简中](Readme_CN.md)
 
+## 开发单位
+
+| Peng Cheng Laboratory  |  Beijing Jide OS Technology Co., Ltd. |
+|---|---|
+|<img src="https://dw.pcl.ac.cn/eco-mall/favicon.ico" width="70" height="70" /> |  <img src="https://i.loli.net/2020/08/27/rG7SsjcwBMKAENW.png"  height="150" />|
+
 ## Introduction
 
 Atlas 300C Inference Stack(AIS) is a software stack specifically developed for [Peng Cheng laboratory](http://www.szpclab.com/) [cloud development platform](https://dw.pcl.ac.cn). It's based on Made-in-China ARM processor and Huawei Atlas 300 acceleration card. This application automatically installs all necessary softwares for convenient development of inference applications. Users can apply for pre-installed environment from [Peng Cheng laboratory](https://dw.pcl.ac.cn/#/soft/deepLearn). This is the open source repository of the software stack.
