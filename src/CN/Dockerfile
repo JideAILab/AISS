@@ -34,14 +34,14 @@ RUN tar -zxvf $(ls Ascend_DDK*ubuntu18.04*) &&\
     echo -e "\
             export DDK_PATH=${DDKPATH}ddk \n \
             export DDK_HOME=${DDKPATH}ddk \n \
-            export PYTHONPATH=$PYTHONPATH:$DDK_PATH/site-packages/te-0.4.0.egg:$DDK_PATH/site-packages/topi-0.4.0.egg \n \
-            export LD_LIBRARY_PATH=$DDK_PATH/uihost/lib:$LD_LIBRARY_PATH \n \
-            export PATH=$PATH:$DDK_PATH/toolchains/ccec-linux/bin:$DDK_PATH/uihost/bin \n \
-            export TVM_AICPU_LIBRARY_PATH=$DDK_PATH/uihost/lib/:$DDK_PATH/uihost/toolchains/ccec-linux/aicpu_lib \n \
-            export TVM_AICPU_INCLUDE_PATH=$DDK_PATH/include/inc/tensor_engine \n \
-            export TVM_AICPU_OS_SYSROOT=$DDK_PATH/toolchains/aarch64-linux-gcc6.3/sysroot \n \
-            export NPU_HOST_LIB=$DDK_PATH/host/lib \n \
-            export NPU_DEV_LIB=$DDK_PATH/device/lib \n \
+            export PYTHONPATH=\$PYTHONPATH:\$DDK_PATH/site-packages/te-0.4.0.egg:\$DDK_PATH/site-packages/topi-0.4.0.egg \n \
+            export LD_LIBRARY_PATH=\$DDK_PATH/uihost/lib:\$LD_LIBRARY_PATH \n \
+            export PATH=$PATH:\$DDK_PATH/toolchains/ccec-linux/bin:\$DDK_PATH/uihost/bin \n \
+            export TVM_AICPU_LIBRARY_PATH=\$DDK_PATH/uihost/lib/:\$DDK_PATH/uihost/toolchains/ccec-linux/aicpu_lib \n \
+            export TVM_AICPU_INCLUDE_PATH=\$DDK_PATH/include/inc/tensor_engine \n \
+            export TVM_AICPU_OS_SYSROOT=\$DDK_PATH/toolchains/aarch64-linux-gcc6.3/sysroot \n \
+            export NPU_HOST_LIB=\$DDK_PATH/host/lib \n \
+            export NPU_DEV_LIB=\$DDK_PATH/device/lib \n \
             cd /home \n \
             " >> $HOME/.bashrc &&\
     ln -s /huawei/ddk/bin/aarch64-linux-gcc7.3.1/omg /usr/sbin/omg 
