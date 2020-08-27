@@ -6,7 +6,7 @@
 
 | 鹏程实验室  |  北京技德系统技术有限公司 |
 |---|---|
-|<img src="https://dw.pcl.ac.cn/eco-mall/favicon.ico" width="70" height="70" /> |  <img src="https://i.loli.net/2020/08/27/rG7SsjcwBMKAENW.png"  height="70" />|
+|<img src="https://dw.pcl.ac.cn/eco-mall/favicon.ico" width="70" height="70" />|  <img src="https://i.loli.net/2020/08/27/rG7SsjcwBMKAENW.png"  height="70" />|
 
 ## 功能简介
 
@@ -74,9 +74,6 @@ cd src/CN
 ASCEND_CHIP_ID=$YOUR_ID PORT=$YOUR_PORT \
 docker-compose up -d --no-deps --build
 ```
-
-注：镜像创建可能会需要30分钟(与网络和硬件环境相关)。
-
 ### 方法二：集群部署
 在安装驱动、Docker、docker-compose之后，将Docker Engine转为Swarm形式运行。
 
