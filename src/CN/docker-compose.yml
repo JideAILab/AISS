@@ -9,8 +9,8 @@ services:
         restart: always
         volumes:
             - user_work_directory:/home
-        ports:
-            - "8777:8888"
+        # ports:
+        #     - "8777:8888"
         devices:
             - "/dev/davinci_manager:/dev/davinci_manager"
             - "/dev/hisi_hdc:/dev/hisi_hdc"
@@ -21,22 +21,22 @@ services:
             context: ../../
             dockerfile: src/CN/mkdocs/Dockerfile
         restart: always
-        ports:
-            - "8774:8888"
+        # ports:
+        #     - "8774:8888"
 
     filebrowser:
         build: ./filebrowser
         restart: always
         volumes:
             - user_work_directory:/home
-        ports:
-            - "8776:8888"
+        # ports:
+        #     - "8776:8888"
 
     ttyd:
         build: ./ttyd
         restart: always
-        ports:
-            - "8775:8888"
+        # ports:
+        #     - "8775:8888"
         links:
             - codeserver
     
@@ -44,8 +44,8 @@ services:
         build:
             context: ./site
             dockerfile: Dockerfile
-        ports: 
-            - 8873:80
+        # ports: 
+        #     - 8873:80
         restart: always
     
     nginx:
