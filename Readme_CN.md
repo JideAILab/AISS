@@ -6,7 +6,7 @@
 
 | 鹏程实验室  |  北京技德系统技术有限公司 |
 |---|---|
-|<img src="https://dw.pcl.ac.cn/eco-mall/favicon.ico" width="70" height="70" /> |  <img src="https://i.loli.net/2020/08/27/rG7SsjcwBMKAENW.png"  height="150" />|
+|<img src="https://dw.pcl.ac.cn/eco-mall/favicon.ico" width="70" height="70" /> |  <img src="https://i.loli.net/2020/08/27/rG7SsjcwBMKAENW.png"  height="70" />|
 
 ## 功能简介
 
