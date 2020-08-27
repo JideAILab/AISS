@@ -55,12 +55,18 @@ First, make sure Ascend 310 NPU driver, docker and docker-compose is installed. 
 ```bash
 #default
 cd src/default
+
+ASCEND_CHIP_ID=$YOUR_ID PORT=$YOUR_PORT \
 docker-compose up -d --no-deps --build
 
 #mainland China
 cd src/CN
+
+ASCEND_CHIP_ID=$YOUR_ID PORT=$YOUR_PORT \
 docker-compose up -d --no-deps --build
 ```
+
+PS Based on your network and Hardware configuration, the build process may take up to 30 minutes to finish.
 
 ### Method 2: on Swarm
 

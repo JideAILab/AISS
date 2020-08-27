@@ -58,12 +58,18 @@ git submodule update --init --recursive
 ```bash
 #default
 cd src/default
+
+ASCEND_CHIP_ID=$YOUR_ID PORT=$YOUR_PORT \
 docker-compose up -d --no-deps --build
 
 #中国大陆
 cd src/CN
+
+ASCEND_CHIP_ID=$YOUR_ID PORT=$YOUR_PORT \
 docker-compose up -d --no-deps --build
 ```
+
+注：镜像创建可能会需要30分钟(与网络和硬件环境相关)。
 
 ### 方法二：集群部署
 在安装驱动、Docker、docker-compose之后，将Docker Engine转为Swarm形式运行。
