@@ -6,7 +6,7 @@ EN|[简中](Readme_CN.md)
 
 | Peng Cheng Laboratory  |  Beijing Jide OS Technology Co., Ltd. |
 |---|---|
-|<img src="https://dw.pcl.ac.cn/eco-mall/favicon.ico" width="70" height="70" /> |  <img src="https://i.loli.net/2020/08/27/rG7SsjcwBMKAENW.png"  height="150" />|
+|<img src="https://dw.pcl.ac.cn/eco-mall/favicon.ico" width="70" height="70" /> |  <img src="https://i.loli.net/2020/08/27/rG7SsjcwBMKAENW.png"  height="70" />|
 
 ## Introduction
 
