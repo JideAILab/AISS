@@ -18,25 +18,18 @@
 
 注：为用户使用方便，apt（中科院镜像）与pip（清华镜像）的源全部已更换为国内镜像。
 
-## vscode教程
-
-详情请参见[这里](https://jeasonstudio.gitbooks.io/vscode-cn-doc/)。
-
 ## 示例程序的编译与运行
 
-此指南位于`/root/guide.md`。
+此指南位于`/home/doc/guide.md`。
 
-Atlas 300C示例程序位于位于`/root/samples/`。以下将编译运行`HelloDavinci`作为示例。
+Atlas 300C示例程序位于位于`/home/samples/`。以下将编译运行`HelloDavinci`作为示例。
 
-点击左上角应用程序菜单-->文件-->打开文件夹。打开`/samples/Samples/HelloDavinci/`。
+点击左上角应用程序菜单-->文件-->打开文件夹。打开`/home/Samples/HelloDavinci/`。
 等待重新加载后，可查看`HelloDavinci`的代码并作出相应的修改。
 
 点击左上角应用程序菜单-->终端-->新终端。
 
-进入bash终端后运行以下，以配置编译运行环境。
-```bash
-source /.cshrc_usr
-```
+与310推理相关的环境变量在`$HOME/.bashrc`中设置。
 
 注：在bash中，复制粘贴请使用`ctrl+insert`与`shift+insert`。
 
