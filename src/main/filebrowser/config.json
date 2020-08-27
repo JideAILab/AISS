@@ -1,0 +1,13 @@
+{
+    "noAuth": true,
+    "port": 8888,
+    "address": "0.0.0.0",
+    "database": "/root/database.db",
+    "scope": "/root/data",
+    "allowCommands": false,
+    "allowEdit": true,
+    "allowNew": true,
+    "commands": [],
+    "baseURL":"/filebrowser",
+    "root": "/home"
+}

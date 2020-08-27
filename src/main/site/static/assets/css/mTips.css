@@ -1,0 +1,27 @@
+.mTips {
+	position: fixed;
+	padding: 8px 12px;
+	color: #fff;
+	border-radius: 5px;
+	font-family: "微软雅黑";
+	z-index: 999;
+	display: inline;
+	font-size: 14px;
+}
+
+.mTips-success {
+	background-color: rgba(52, 123, 151, 0.8);
+	color: #fff;
+}
+.item {
+	border-radius: 5px;
+	width: 30px;
+	height: 30px;
+	margin: 20px;
+	float: right;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}

@@ -1,0 +1,11 @@
+# docker-compose.yml
+version: '3'
+
+services: 
+    site:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports: 
+            - 8875:80
+        restart: always

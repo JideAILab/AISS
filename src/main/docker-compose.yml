@@ -1,0 +1,56 @@
+# docker-compose.yml
+version: '3'
+
+services: 
+    codeserver:
+        build:
+            context: ../../
+            dockerfile: src/CN/Dockerfile
+        restart: always
+        volumes:
+            - user_work_directory:/home
+        devices:
+            - "/dev/davinci_manager:/dev/davinci_manager"
+            - "/dev/hisi_hdc:/dev/hisi_hdc"
+            - "/dev/davinci$ASCEND_CHIP_ID:/dev/davinci0"
+
+    mkdocs:
+        build:
+            context: ../../
+            dockerfile: src/CN/mkdocs/Dockerfile
+        restart: always
+
+    filebrowser:
+        build: ./filebrowser
+        restart: always
+        volumes:
+            - user_work_directory:/home
+
+    ttyd:
+        build: ./ttyd
+        restart: always
+        links:
+            - codeserver
+    
+    site:
+        build:
+            context: ./site
+            dockerfile: Dockerfile
+        restart: always
+    
+    nginx:
+        build:
+            context: ./nginx
+            dockerfile: Dockerfile
+        restart: always
+        links:
+            - codeserver
+            - mkdocs
+            - filebrowser
+            - ttyd
+            - site
+        ports: 
+            - $PORT:80
+    
+volumes:
+    user_work_directory:

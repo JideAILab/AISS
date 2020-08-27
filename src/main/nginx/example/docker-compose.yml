@@ -1,0 +1,19 @@
+# docker-compose.yml
+version: '3'
+
+services: 
+    site:
+        build:
+            context: ./site
+            dockerfile: Dockerfile
+        restart: always
+
+    nginx:
+        build:
+            context: ./nginx
+            dockerfile: Dockerfile
+        restart: always
+        links:
+            - site
+        ports: 
+            - 8879:80

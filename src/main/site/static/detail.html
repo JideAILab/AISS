@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <title>鹏城生态</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/kefu.css">
+    <base target="_blank" />
+    <link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-3.3.4.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/mTips.css" />
+
+</head>
+
+<body>
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <!-- ***** Logo Start ***** -->
+                            <a id="home_a" href="index.html" class="logo" target="_self">
+                                <img src="assets/images/logo.svg" alt="">
+                            </a>
+                            <!-- ***** Logo End ***** -->
+                            <!-- ***** Menu Start ***** -->
+                            <ul class="nav">
+                                <!-- <li class="scrollToLink"><a href="#" class="active">首页</a></li> -->
+                                <li class="scrollToLink"><a id='ide_url' target="_self"
+                                        href="detail.html?url=codeserver">Cloud IDE</a>
+                                </li>
+                                <li class="scrollToLink"><a id='upload_url' target="_self"
+                                        href="detail.html?url=filebrowser">File Upload</a>
+                                </li>
+                                <!-- <li class="scrollToLink"><a target="_self" href="mirror/mirror.html">软件仓库</a></li> -->
+                                <li class="scrollToLink"><a id='shell_url' target="_self"
+                                        href="detail.html?url=shell">Cloud Terminal</a>
+                                </li>
+                                <li class="scrollToLink"><a id='file_url' target="_self"
+                                        href="detail.html?url=docs">Documents</a>
+                                </li>
+
+                            </ul>
+                            <img src="assets/images/about.png" class="item item-success" />
+
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+                            <!-- ***** Menu End ***** -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <div id="tab_1">
+        <iframe src="" id="iframe" frameborder="0" scrolling="yes" onload="changeFrameHeight()"></iframe>
+    </div>
+
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        var request = {
+            QueryString: function (val) {
+                var uri = window.location.search;
+                var re = new RegExp("" + val + "\=([^\&\?]*)", "ig");
+                return ((uri.match(re)) ? (uri.match(re)[0].substr(val.length + 1)) : null);
+            }
+        }
+        var url = request.QueryString("url");
+        if (url == 'codeserver') {
+            console.log(url)
+            document.getElementById("ide_url").style.color = "rgb(220, 231, 21)";
+            document.getElementById("ide_url").style.pointerEvents = "none";
+        }
+        if (url == 'filebrowser') {
+            console.log(url)
+            document.getElementById("upload_url").style.color = "rgb(220, 231, 21)";
+            document.getElementById("upload_url").style.pointerEvents = "none";
+        }
+        if (url == 'shell') {
+            console.log(url)
+            document.getElementById("shell_url").style.color = "rgb(220, 231, 21)";
+            document.getElementById("shell_url").style.pointerEvents = "none";
+        }
+        if (url == 'docs') {
+            console.log(url)
+            document.getElementById("file_url").style.color = "rgb(220, 231, 21)";
+            document.getElementById("file_url").style.pointerEvents = "none";
+        }
+        url = '/' + url + "/";
+
+        document.getElementById("iframe").src = url;
+    </script>
+
+
+
+
+
+    <script type="text/javascript" language="javascript">
+        function changeFrameHeight() {
+            var ifm = document.getElementById("iframe");
+            ifm.height = document.documentElement.clientHeight;
+            ifm.width = document.documentElement.clientWidth;
+            console.log("高度", document.documentElement.clientHeight);
+        }
+        window.onresize = function () {
+            changeFrameHeight();
+        }
+    </script>
+    </script>
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/mTips.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        //js设置样式
+        $('.item-success').on('mouseenter', function (e) {
+            //显示提示
+            mTips.c.x = 30;
+            mTips.c.y = 30;
+            mTips.s('<h4>Atlas Inference Software Stack(AISS)</h4><p>version：0.0.1.0<p><p>DDK version：1.32.T7.B070</p><p>os：Ubuntu18.04lts</p><p>CPU：Kunpeng 920-4826</p><p>Github：AI-HPC-Research-Team@github</p>', 'success');
+        });
+
+        $('.item-success').on('mouseleave', function (e) {
+            mTips.h();
+            mTips.c.x = 10;
+            mTips.c.y = 10;
+        });
+
+
+    </script>
+
+</body>
+
+</html>

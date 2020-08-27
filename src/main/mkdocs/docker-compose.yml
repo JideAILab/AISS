@@ -1,0 +1,11 @@
+# docker-compose.yml
+version: '3'
+
+services:
+    mkdocs:
+        build:
+            context: ../../../
+            dockerfile: src/CN/mkdocs/Dockerfile
+        restart: always
+        ports:
+            - "8774:8888"
