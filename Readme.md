@@ -2,7 +2,7 @@
 
 EN|[简中](Readme_CN.md)
 
-## 开发单位
+## Developers
 
 | Peng Cheng Laboratory  |  Beijing Jide OS Technology Co., Ltd. |
 |---|---|
