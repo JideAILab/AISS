@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 USAGE="Usage: `basename $0` [-hv] [-o arg] args"
 
