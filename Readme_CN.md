@@ -24,7 +24,7 @@ Atlas 300C Inference Software Stack(AISS)是构建在[鹏城实验室](http://ww
 整个软件栈的架构如图1。
 ![Structure.png](https://i.loli.net/2020/08/21/yjWp1n68NQZLxhc.png)
 
-整个软件栈主要功能为自动安装部署开发环境，支持单机与集群部署。目前，支持在64位ARMv8主机上配置。Atlas300计算卡通过PCIE安装于主板上，正确安装驱动后可以使用npu-smi查看各个升腾310芯片的在线情况。在开发者软件栈测，所有的服务都在独立的容器中，相应容器通过Docker links连接。容器WEBIDE是主容器，拥有调用NPU的能力，华为升腾DDK也安装在此容器中。FileBrowser为方便高速上下传文件，可以提供批量上下传文件，上下穿文件夹等功能。ttyd为webshell，通过ssh连接至WEBIDE容器，从而获得升腾NPU运行时。Status Monitor通过映射入华为升腾卡驱动调用npu-smi用于监控计算卡状态。Doc Reader托管相应的文档。所有的web服务通过主页集成，使用Nginx反向代理，通过单一端口呈现于开发者。
+整个软件栈主要功能为自动安装部署开发环境，支持单机与集群部署。目前，支持在64位ARMv8主机上配置。Atlas300计算卡通过PCIE安装于主板上，正确安装驱动后可以使用npu-smi查看各个昇腾310芯片的在线情况。在开发者软件栈测，所有的服务都在独立的容器中，相应容器通过Docker links连接。容器WEBIDE是主容器，拥有调用NPU的能力，华为昇腾DDK也安装在此容器中。FileBrowser为方便高速上下传文件，可以提供批量上下传文件，上下穿文件夹等功能。ttyd为webshell，通过ssh连接至WEBIDE容器，从而获得昇腾NPU运行时。Status Monitor通过映射入华为昇腾卡驱动调用npu-smi用于监控计算卡状态。Doc Reader托管相应的文档。所有的web服务通过主页集成，使用Nginx反向代理，通过单一端口呈现于开发者。
 
 ## 项目结构：
 
